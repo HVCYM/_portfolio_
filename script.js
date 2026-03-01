@@ -209,9 +209,9 @@
   function updateProfileImage(theme) {
     if (profileImg) {
       if (theme === 'light') {
-        profileImg.src = '/pic.png';
+        profileImg.src = '/assets/pic.png';
       } else {
-        profileImg.src = '/pic.jpg';
+        profileImg.src = '/assets/pic.jpg';
       }
     }
   }
