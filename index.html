@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="theme-color" content="#0a1929" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#fafbfc" media="(prefers-color-scheme: light)" />
+  <title>Himanshu Yadav | Technology Associate & Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="cursor-bubble" aria-hidden="true"></div>
+  <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+  <div class="cosmic-bg" aria-hidden="true">
+    <div class="stars-layer stars-small"></div>
+    <div class="stars-layer stars-medium"></div>
+    <div class="stars-layer stars-large"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+  </div>
+
+  <nav class="nav">
+    <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+      <span class="theme-icon theme-icon-sun">☀️</span>
+      <span class="theme-icon theme-icon-moon">🌙</span>
+    </button>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Himanshu Yadav</h1>
+          <p class="hero-role">
+            <span class="hero-role-static">I'm a </span>
+            <span class="hero-role-typewriter" id="typewriter"></span>
+          </p>
+          <p class="hero-bio">I build scalable backend systems with Java & Spring Boot and enjoy turning complex problems into reliable software.</p>
+          <div class="hero-highlights">
+            <span class="hero-pill">LeetCode Top 0.5%</span>
+            <span class="hero-pill">Meta Hacker Cup #236</span>
+            <span class="hero-pill">Credit Suisse Top 50</span>
+          </div>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+            <div class="resume-dropdown">
+              <button class="btn btn-resume" aria-label="Resume options">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>Resume</span>
+                <svg class="dropdown-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="resume-dropdown-menu">
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="resume-dropdown-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                  <span>Preview</span>
+                </a>
+                <a href="/resume.pdf" download class="resume-dropdown-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-profile">
+          <div class="hero-profile-pic">
+            <img src="/pic.jpg" alt="Himanshu Yadav" width="280" height="320" />
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title"><span class="section-num">01.</span> About & Education</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Education</h3>
+          <h4>Army Institute of Technology</h4>
+          <p class="degree">Bachelor of Engineering in Information Technology</p>
+          <p class="meta">Pune, India · 2020 – 2024</p>
+          <p class="cgpa">CGPA: <strong>8.7</strong>/10.0</p>
+        </div>
+        <div class="about-card about-intro">
+          <p>I'm a Technology Associate at ZS Associates, designing and developing high-performance backend systems for pharmaceutical applications. I love clean architecture, microservices, and turning complex requirements into reliable software.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section section-dark">
+      <h2 class="section-title"><span class="section-num">02.</span> Achievements</h2>
+      <div class="achievements-grid">
+        <article class="achievement-card">
+          <span class="achievement-badge">Meta Hacker Cup</span>
+          <p>Secured <strong>Rank 236</strong> in global programming competition</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-badge">LeetCode Guardian</span>
+          <p>Max rating <strong>2206</strong> (Top 0.5 percentile). Profile: HVCYM</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-badge">Codeforces Expert</span>
+          <p>Max rating <strong>1601</strong>. Profile: HVCYM</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-badge">Credit Suisse</span>
+          <p>Ranked in <strong>Top 50</strong> globally in Global Coding Challenge</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-badge">Coding Ninjas</span>
+          <p>Secured <strong>Rank 11</strong> in competitive programming contest</p>
+        </article>
+        <article class="achievement-card">
+          <span class="achievement-badge">CodeChef 4-Star</span>
+          <p>Max rating <strong>1888</strong>. Profile: himanshuyadav2</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2 class="section-title"><span class="section-num">03.</span> Work Experience</h2>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <article class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Technology Associate</h3>
+              <span class="timeline-company">ZS Associates</span>
+              <span class="timeline-date">June 2024 – Present</span>
+              <span class="timeline-location">Pune, India</span>
+            </div>
+            <ul class="timeline-list">
+              <li>Designed and developed scalable backend services using Java 8+ and Spring Boot, enabling high-performing pharmaceutical applications</li>
+              <li>Built and maintained REST/JSON APIs integrated with client platforms, handling millions of daily transactions</li>
+              <li>Implemented microservices architecture with Spring Boot, Spring Batch, improving modularity and scalability</li>
+              <li>Developed persistence layer using JPA and Hibernate, ensuring optimized data access with Oracle and PostgreSQL</li>
+              <li>Automated builds and deployments with Maven, Jenkins, and Docker, streamlining CI/CD pipelines</li>
+              <li>Secured applications with Spring Security and OAuth2, ensuring HIPAA & FDA compliance</li>
+              <li>Performed unit and integration testing with JUnit and Mockito, achieving 90%+ test coverage</li>
+              <li>Mentored junior developers on Java backend best practices, design patterns, and clean coding standards</li>
+              <li>Collaborated in Agile Scrum teams with QA and business stakeholders, delivering 15+ production-grade APIs</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-dark">
+      <h2 class="section-title"><span class="section-num">04.</span> Skills & Technologies</h2>
+      <div class="skills-container">
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-code" aria-hidden="true"></i> Programming Languages</h4>
+          <div class="skill-tags">
+            <span><i class="fab fa-java"></i> Java 8+</span>
+            <span><i class="fas fa-database"></i> SQL</span>
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fas fa-code"></i> C++</span>
+            <span><i class="fab fa-js"></i> JavaScript</span>
+            <span><i class="fas fa-code"></i> Kotlin</span>
+          </div>
+        </div>
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-layer-group" aria-hidden="true"></i> Frameworks</h4>
+          <div class="skill-tags">
+            <span><i class="fas fa-leaf"></i> Spring Boot</span>
+            <span><i class="fas fa-layer-group"></i> Spring Batch</span>
+            <span><i class="fas fa-shield-alt"></i> Spring Security</span>
+            <span><i class="fas fa-database"></i> JPA</span>
+            <span><i class="fas fa-database"></i> Hibernate</span>
+          </div>
+        </div>
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-database" aria-hidden="true"></i> Databases</h4>
+          <div class="skill-tags">
+            <span><i class="fas fa-database"></i> Oracle</span>
+            <span><i class="fas fa-database"></i> MySQL</span>
+            <span><i class="fas fa-database"></i> PostgreSQL</span>
+            <span><i class="fas fa-leaf"></i> MongoDB</span>
+            <span><i class="fas fa-bolt"></i> Redis</span>
+          </div>
+        </div>
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-cloud" aria-hidden="true"></i> Big Data & Cloud</h4>
+          <div class="skill-tags">
+            <span><i class="fas fa-fire"></i> Apache Spark</span>
+            <span><i class="fas fa-server"></i> Hadoop</span>
+            <span><i class="fab fa-aws"></i> AWS</span>
+            <span><i class="fab fa-docker"></i> Docker</span>
+            <span><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+          </div>
+        </div>
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-tools" aria-hidden="true"></i> Build & DevOps</h4>
+          <div class="skill-tags">
+            <span><i class="fas fa-box"></i> Maven</span>
+            <span><i class="fas fa-cog"></i> Jenkins</span>
+            <span><i class="fas fa-sync-alt"></i> CI/CD</span>
+          </div>
+        </div>
+        <div class="skills-group skill-card">
+          <h4><i class="fas fa-lightbulb" aria-hidden="true"></i> Concepts</h4>
+          <div class="skill-tags">
+            <span><i class="fas fa-cubes"></i> Microservices</span>
+            <span><i class="fas fa-exchange-alt"></i> RESTful API</span>
+            <span><i class="fas fa-lock"></i> OAuth2</span>
+            <span><i class="fas fa-sitemap"></i> System Design</span>
+            <span><i class="fas fa-project-diagram"></i> DSA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title"><span class="section-num">05.</span> Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-title-row">
+              <h3>Contact Manager</h3>
+              <a href="https://github.com/HVCYM/contact-manager" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="View Contact Manager on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+            <span class="project-stack">ReactJS · JSON Server · Semantic UI</span>
+          </div>
+          <ul>
+            <li>Developed a dynamic web application for contact management with full CRUD operations using ReactJS and JSON Server</li>
+            <li>Implemented RESTful API integration with JSON Server for seamless data management and real-time updates</li>
+            <li>Enhanced user experience with Semantic UI for responsive design and intuitive interface interactions</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-title-row">
+              <h3>Social Media Trend Extractor</h3>
+              <a href="https://github.com/HVCYM/Extracting-trends-from-social-media" target="_blank" rel="noopener noreferrer" class="project-github-link" aria-label="View Social Media Trend Extractor on GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+            <span class="project-stack">ReactJS · Python Django · Beautiful Soup</span>
+          </div>
+          <ul>
+            <li>Architected frontend interface using ReactJS for visualizing social media trends and analytics dashboard</li>
+            <li>Collaborated on full-stack development integrating Python Django backend with web scraping using Beautiful Soup</li>
+            <li>Implemented data visualization components for trend analysis and social media metrics presentation</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-dark contact-section">
+      <h2 class="section-title"><span class="section-num">06.</span> Get in Touch</h2>
+      <p class="contact-intro">Have a project in mind or want to chat? I'm open to new opportunities—drop me a line or connect on LinkedIn.</p>
+      <div class="contact-links">
+        <a href="#" class="contact-card contact-card-reveal" data-email="himanshuyadav20@hotmail.com" data-reveal="Hover to reveal email" aria-label="Reveal email address">
+          <span class="contact-icon" aria-hidden="true">✉</span>
+          <span class="contact-value contact-placeholder">Email</span>
+          <span class="contact-value contact-revealed" aria-hidden="true"></span>
+        </a>
+        <a href="#" class="contact-card contact-card-reveal" data-tel="+918858100342" data-reveal="Hover to reveal number" aria-label="Reveal phone number">
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <span class="contact-value contact-placeholder">Phone</span>
+          <span class="contact-value contact-revealed" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/himanshu-yadav-ait/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </span>
+          <span class="contact-value">LinkedIn</span>
+        </a>
+        <a href="https://github.com/HVCYM" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </span>
+          <span class="contact-value">GitHub</span>
+        </a>
+      </div>
+      <div class="contact-coding-wrap">
+        <h3 class="contact-coding-title">Coding profiles</h3>
+        <div class="contact-coding-links">
+          <a href="https://leetcode.com/u/HVCYM/" target="_blank" rel="noopener noreferrer" class="contact-profile-link contact-profile-leetcode" aria-label="LeetCode profile HVCYM">
+            <span class="contact-profile-icon" aria-hidden="true">⌗</span>
+            <span class="contact-profile-name">LeetCode</span>
+          </a>
+          <a href="https://codeforces.com/profile/HVCYM" target="_blank" rel="noopener noreferrer" class="contact-profile-link contact-profile-codeforces" aria-label="Codeforces profile HVCYM">
+            <span class="contact-profile-icon" aria-hidden="true">◈</span>
+            <span class="contact-profile-name">Codeforces</span>
+            
+          </a>
+          <a href="https://www.codechef.com/users/himanshuyadav2" target="_blank" rel="noopener noreferrer" class="contact-profile-link contact-profile-codechef" aria-label="CodeChef profile himanshuyadav2">
+            <span class="contact-profile-icon" aria-hidden="true">◆</span>
+            <span class="contact-profile-name">CodeChef</span>
+            
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Thanks for visiting!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
